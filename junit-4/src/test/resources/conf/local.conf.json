@@ -5,6 +5,7 @@
   "capabilities": {
     "build": "junit-browserstack",
     "name": "local_test",
+    "browserstack.source": "junit-4-sample-selenium-3-v1.0",
     "browserstack.debug": true,
     "browserstack.local": true
   },
