@@ -7,7 +7,6 @@
       "common_caps": {
         "name": "BStack single junit-5",
         "build": "browserstack-build-1",
-        "browserstack.source": "junit-5-sample-selenium-3-v1.0",
         "browserstack.console": "verbose",
         "browserstack.networkLogs": "true",
         "browserstack.debug": "true"
@@ -25,7 +24,6 @@
       "common_caps": {
         "name": "BStack local junit-5",
         "build": "browserstack-build-1",
-        "browserstack.source": "junit-5-sample-selenium-3-v1.0",
         "browserstack.console": "verbose",
         "browserstack.local": "true",
         "browserstack.debug": "true"
@@ -43,7 +41,6 @@
       "common_caps": {
         "name": "BStack parallel junit-5",
         "build": "browserstack-build-1",
-        "browserstack.source": "junit-5-sample-selenium-3-v1.0",
         "browserstack.console": "verbose",
         "browserstack.debug": "true"
       },

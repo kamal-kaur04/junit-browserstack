@@ -77,6 +77,7 @@ public class BstackRunner implements TestTemplateInvocationContextProvider {
 
             while (platformIterator.hasNext()) {
                 capabilities = new DesiredCapabilities();
+                capabilities.setCapability("browserstack.source", "junit-5:sample-selenium-3:v1.0");
                 Iterator commonCapsIterator = commonCapsMap.entrySet().iterator();
                 while (commonCapsIterator.hasNext()) {
                     Map.Entry capsName = (Map.Entry) commonCapsIterator.next();
