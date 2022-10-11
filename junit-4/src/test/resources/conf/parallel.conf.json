@@ -12,17 +12,8 @@
       "browser": "chrome"
     },
     {
-      "browser": "firefox"
-    },
-    {
       "browser": "safari",
       "os": "OS X"
-    },
-    {
-      "browser": "Internet Explorer"
-    },
-    {
-      "device": "Samsung Galaxy S21"
     },
     {
       "device": "iPhone 12"
