@@ -76,10 +76,10 @@ jobs:
         with:
           name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 4
           path: ./junit-4/logs/
+      - name: sleep 10000s
       - name: Run mvn test
         run: |
           cd junit-5
-          sleep 1000s
           mvn compile
           mvn test
 #      - name: Run mvn profile single
