@@ -56,35 +56,35 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
-      - name: Change Directory to JUnit-4
-        run: |
-          pwd
-          cd junit-4
-          pwd
       - name: Run mvn test
         run: |
+          cd junit-4
+          pwd
           mvn compile
           mvn test
       - name: Run mvn profile sample
         run: |
+          cd junit-4
           mvn compile
           mvn test -P sample
       - name: Run mvn profile local
         run: |
+          cd junit-4
           mvn compile
           mvn test -P local
-      - name: Change Directory to JUnit-5
-        run: cd ../junit-5
       - name: Run mvn test
         run: |
+          cd junit-5
           mvn compile
           mvn test
       - name: Run mvn profile single
         run: |
+          cd junit-5
           mvn compile
           mvn test -P single
       - name: Run mvn profile local
         run: |
+          cd junit-5
           mvn compile
           mvn test -P local
       - if: always()
