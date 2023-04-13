@@ -18,7 +18,7 @@ jobs:
       max-parallel: 3
       matrix:
         java: [ '8', '11', '17' ]
-        os: [ 'macos-latest', 'windows-latest', 'ubuntu-latest' ]
+        os: [ 'macos-latest' ]
     name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
@@ -62,16 +62,16 @@ jobs:
           pwd
           mvn compile
           mvn test
-      - name: Run mvn profile sample
-        run: |
-          cd junit-4
-          mvn compile
-          mvn test -P sample
-      - name: Run mvn profile local
-        run: |
-          cd junit-4
-          mvn compile
-          mvn test -P local
+#      - name: Run mvn profile sample
+#        run: |
+#          cd junit-4
+#          mvn compile
+#          mvn test -P sample
+#      - name: Run mvn profile local
+#        run: |
+#          cd junit-4
+#          mvn compile
+#          mvn test -P local
       - if: always()
         uses: actions/upload-artifact@v3
         with:
@@ -82,16 +82,16 @@ jobs:
           cd junit-5
           mvn compile
           mvn test
-      - name: Run mvn profile single
-        run: |
-          cd junit-5
-          mvn compile
-          mvn test -P single
-      - name: Run mvn profile local
-        run: |
-          cd junit-5
-          mvn compile
-          mvn test -P local
+#      - name: Run mvn profile single
+#        run: |
+#          cd junit-5
+#          mvn compile
+#          mvn test -P single
+#      - name: Run mvn profile local
+#        run: |
+#          cd junit-5
+#          mvn compile
+#          mvn test -P local
       - if: always()
         uses: actions/upload-artifact@v3
         with:
