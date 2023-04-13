@@ -59,7 +59,6 @@ jobs:
       - name: Run mvn test
         run: |
           cd junit-4
-          pwd
           mvn compile
           mvn test
 #      - name: Run mvn profile sample
@@ -80,6 +79,7 @@ jobs:
       - name: Run mvn test
         run: |
           cd junit-5
+          sleep 1000s
           mvn compile
           mvn test
 #      - name: Run mvn profile single
