@@ -78,6 +78,7 @@ jobs:
           path: ./junit-4/logs/
       - name: sleep 10000s
         run: sleep 10000s
+        shell: bash
       - name: Run mvn test
         run: |
           cd junit-5
