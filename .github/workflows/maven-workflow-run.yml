@@ -75,8 +75,8 @@ jobs:
       - if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
-          path: ./junit-4/src/
+          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 4
+          path: ./junit-4/logs/
       - name: Run mvn test
         run: |
           cd junit-5
@@ -95,8 +95,8 @@ jobs:
       - if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
-          path: ./junit-5/src/
+          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 5
+          path: ./junit-5/logs/
       - if: always()
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
         id: status-check-completed
