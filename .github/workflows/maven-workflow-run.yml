@@ -75,7 +75,7 @@ jobs:
       - if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: browserstack-sdk logs JUnit-4
+          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
           path: ./junit-4/src/
       - name: Run mvn test
         run: |
@@ -95,7 +95,7 @@ jobs:
       - if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: browserstack-sdk logs JUnit-5
+          name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
           path: ./junit-5/src/
       - if: always()
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
