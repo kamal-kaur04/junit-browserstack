@@ -72,10 +72,11 @@ jobs:
           cd junit-4
           mvn compile
           mvn test -P local
-      - uses: actions/upload-artifact@v3
+      - if: always()
+        uses: actions/upload-artifact@v3
         with:
           name: browserstack-sdk logs
-          path: ./logs/
+          path: ./junit-4/logs/
       - name: Run mvn test
         run: |
           cd junit-5
@@ -91,10 +92,11 @@ jobs:
           cd junit-5
           mvn compile
           mvn test -P local
-      - uses: actions/upload-artifact@v3
+      - if: always()
+        uses: actions/upload-artifact@v3
         with:
           name: browserstack-sdk logs
-          path: ./logs/
+          path: ./junit-5/logs/
       - if: always()
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
         id: status-check-completed
