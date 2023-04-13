@@ -64,7 +64,7 @@ parallelsPerPlatform: 1
 browserstackLocal: true # <boolean> (Default false)
 
 browserStackLocalOptions:
-  logFile: ./src/logs.txt
+  logFile: ./logs/logs.txt
   verbose: true
 # Options to be passed to BrowserStack local in-case of advanced configurations
 # browserStackLocalOptions:
