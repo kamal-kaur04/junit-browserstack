@@ -57,7 +57,10 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
       - name: Change Directory to JUnit-4
-        run: cd junit-4
+        run: |
+          pwd
+          cd junit-4
+          pwd
       - name: Run mvn test
         run: |
           mvn compile
