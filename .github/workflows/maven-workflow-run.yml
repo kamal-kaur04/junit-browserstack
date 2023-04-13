@@ -62,13 +62,11 @@ jobs:
           pwd
           mvn compile
           mvn test
-          ls -la
       - name: Run mvn profile sample
         run: |
           cd junit-4
           mvn compile
           mvn test -P sample
-          ls -la
       - name: Run mvn profile local
         run: |
           cd junit-4
