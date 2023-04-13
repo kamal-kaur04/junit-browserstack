@@ -77,7 +77,7 @@ jobs:
           name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 4
           path: ./junit-4/logs/
       - name: sleep 10000s
-        run: sleep 10000
+        run: sleep 1000
         shell: bash
       - name: Run mvn test
         run: |
