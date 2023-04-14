@@ -67,7 +67,7 @@ browserstackLocal: true # <boolean> (Default false)
 browserStackLocalOptions:
   logFile: ./logs/logs.txt
   verbose: true
-  # localIdentifier: # <string> (Default: null) Needed if you need to run multiple instances of local.
+  localIdentifier: abcd # <string> (Default: null) Needed if you need to run multiple instances of local.
   # forceLocal: true  # <boolean> (Default: false) Set to true if you need to resolve all your traffic via BrowserStack Local tunnel.
   # Entire list of arguments available here -> https://www.browserstack.com/docs/automate/selenium/manage-incoming-connections
   
