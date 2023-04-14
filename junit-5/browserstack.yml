@@ -66,6 +66,7 @@ browserstackLocal: true # <boolean> (Default false)
 browserStackLocalOptions:
   logFile: ./logs/logs.txt
   verbose: true
+  localIdentifier: abcd
 # Options to be passed to BrowserStack local in-case of advanced configurations
 # browserStackLocalOptions:
   # localIdentifier: # <string> (Default: null) Needed if you need to run multiple instances of local.
