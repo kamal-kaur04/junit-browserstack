@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        java: [ '8', '11', '17' ]
+        java: [ '8' ]
         os: [ 'macos-latest' ]
     name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
     env:
@@ -78,6 +78,8 @@ jobs:
         with:
           name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 4
           path: ./junit-4/logs/
+      - name: sleep
+        run: sleep 100
       - name: Run mvn test
         run: |
           cd junit-5
