@@ -60,7 +60,9 @@ jobs:
         run: |
           cd junit-4
           mvn compile
+          ps aux | grep BrowserStackLocal
           mvn test
+          ps aux | grep BrowserStackLocal
 #      - name: Run mvn profile sample
 #        run: |
 #          cd junit-4
@@ -76,14 +78,13 @@ jobs:
         with:
           name: JUnit Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample JUnit 4
           path: ./junit-4/logs/
-      - name: sleep 10000s
-        run: sleep 200
-        shell: bash
       - name: Run mvn test
         run: |
           cd junit-5
+          ps aux | grep BrowserStackLocal
           mvn compile
           mvn test
+          ps aux | grep BrowserStackLocal
 #      - name: Run mvn profile single
 #        run: |
 #          cd junit-5
