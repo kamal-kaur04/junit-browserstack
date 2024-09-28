@@ -27,6 +27,7 @@ public class BrowserStackJUnitTest {
 
     @Before
     public void setUp() throws Exception {
+        System.out.println("It's a test");
         MutableCapabilities capabilities = new MutableCapabilities();
         userName = System.getenv("BROWSERSTACK_USERNAME") != null ? System.getenv("BROWSERSTACK_USERNAME") : (String) browserStackYamlMap.get("userName");
         accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY") != null ? System.getenv("BROWSERSTACK_ACCESS_KEY") : (String) browserStackYamlMap.get("accessKey");
